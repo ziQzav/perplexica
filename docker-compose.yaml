@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: backend.dockerfile
       args:
-        - SEARXNG_API_URL=http://searxng:8080
+        - SEARXNG_API_URL=https://us84occ.mcx.design
     depends_on:
       - searxng
     expose:
@@ -26,8 +26,8 @@ services:
       context: .
       dockerfile: app.dockerfile
       args:
-        - NEXT_PUBLIC_API_URL=http://127.0.0.1:3001/api
-        - NEXT_PUBLIC_WS_URL=ws://127.0.0.1:3001
+        - NEXT_PUBLIC_API_URL=https://g8008gk.mcx.design/api
+        - NEXT_PUBLIC_WS_URL=https://g8008gk.mcx.design
     depends_on:
       - perplexica-backend
     expose:
